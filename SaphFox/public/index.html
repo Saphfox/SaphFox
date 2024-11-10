@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaphFox - Share Your World</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fas fa-play-circle"></i>
+            <span>SaphFox</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-bolt"></i>
+                <span>Shorts</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-video"></i>
+                <span>Videos</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-tower-broadcast"></i>
+                <span>Live</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-fire"></i>
+                <span>Popular</span>
+            </a>
+            <hr class="sidebar-divider">
+            <h3 class="sidebar-heading">Library</h3>
+            <a href="#" class="nav-item">
+                <i class="fas fa-history"></i>
+                <span>History</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-clock"></i>
+                <span>Watch Later</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Liked Videos</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="search-container">
+                <input type="text" placeholder="Search videos...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="nav-actions">
+                <button id="uploadBtn" class="upload-btn">
+                    <i class="fas fa-upload"></i>
+                    <span>Upload</span>
+                </button>
+                <div class="profile-menu">
+                    <img src="/api/placeholder/32/32" alt="Profile" class="profile-pic">
+                    <div class="profile-dropdown">
+                        <div class="profile-header">
+                            <img src="/api/placeholder/64/64" alt="Profile" class="profile-pic-large">
+                            <div class="profile-info">
+                                <h4>User Name</h4>
+                                <p>@username</p>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fas fa-user"></i> Your Channel</a>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content Categories -->
+        <div class="category-tabs">
+            <button class="category-tab active">For You</button>
+            <button class="category-tab">Trending</button>
+            <button class="category-tab">Music</button>
+            <button class="category-tab">Gaming</button>
+            <button class="category-tab">Sports</button>
+            <button class="category-tab">Education</button>
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+            <div class="video-card">
+                <div class="thumbnail-container">
+                    <video class="video-thumbnail" preload="metadata"></video>
+                    <span class="video-duration">10:28</span>
+                </div>
+                <div class="video-info">
+                    <img src="/api/placeholder/40/40" alt="Channel" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">Video Title Goes Here</h3>
+                        <a href="#" class="channel-name">Channel Name</a>
+                        <div class="video-meta">
+                            <span class="views">123K views</span>
+                            <span class="dot">•</span>
+                            <span class="upload-date">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Modal -->
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Upload Video</h2>
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required placeholder="Enter video title">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" placeholder="Tell viewers about your video"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="general">General</option>
+                            <option value="music">Music</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="education">Education</option>
+                            <option value="sports">Sports</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="thumbnail">Thumbnail</label>
+                        <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+                    </div>
+                    <div class="form-group upload-area">
+                        <input type="file" id="video" name="video" accept="video/*" required hidden>
+                        <div class="upload-placeholder">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag and drop video files or click to browse</p>
+                            <button type="button" class="browse-btn">Select Files</button>
+                        </div>
+                    </div>
+                    <div class="upload-progress">
+                        <div class="progress-info">
+                            <span class="filename">No file selected</span>
+                            <span class="percent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" id="progressBar"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Upload Video</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Video Player Modal -->
+        <div id="videoPlayerModal" class="modal">
+            <div class="modal-content video-player-content">
+                <span class="close">&times;</span>
+                <div class="video-container">
+                    <video id="videoPlayer" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-details">
+                    <div class="video-primary-info">
+                        <h2 id="videoTitle"></h2>
+                        <div class="video-stats">
+                            <div class="views-date">
+                                <span id="viewCount"><i class="fas fa-eye"></i> 0 views</span>
+                                <span id="uploadDate"></span>
+                            </div>
+                            <div class="video-actions">
+                                <button id="likeButton" class="action-btn">
+                                    <i class="fas fa-heart"></i>
+                                    <span id="likeCount">0</span>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                    <span>Share</span>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                    <span>Save</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="channel-info">
+                        <img src="/api/placeholder/48/48" alt="Channel" class="channel-pic">
+                        <div class="channel-details">
+                            <h3 class="channel-name">Channel Name</h3>
+                            <span class="subscriber-count">1.2M subscribers</span>
+                        </div>
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                    <div class="video-description">
+                        <p id="videoDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
