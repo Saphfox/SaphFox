@@ -1,31 +1,119 @@
 # SaphFox
 
-**SaphFox** is a modern content-sharing platform aimed at allowing users to upload and share content, engage with the community, and build a dynamic space for creators. It’s designed to be simple yet powerful for both users and developers alike.
+A modern, open-source content-sharing platform built with Node.js and Express, designed for creators to share and engage with video content.
 
----
+![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 
-## Features
+## 🌟 Features
 
-- **User-Friendly Interface**: A clean and intuitive design makes it easy for anyone to create, share, and interact with content.
-- **Modular System**: Easily extendable with plugins and additional features, ensuring scalability.
-- **Developer Friendly**: Open-source and community-driven, allowing developers to contribute and enhance the platform.
-- **Mobile Responsive**: Fully optimized for mobile devices and desktops, providing a seamless experience on any platform.
+- **Intuitive Video Sharing**: Upload, watch, and share videos with ease
+- **Real-time Interactions**: Like videos and track view counts
+- **Modern UI/UX**: Clean, responsive design with dark mode
+- **Client-side Processing**: Efficient video handling and progress tracking
+- **Category Management**: Organize content with customizable categories
+- **Search Functionality**: Quick and responsive content discovery
+- **User Profiles**: Personal channels and content management
+- **Mobile Responsive**: Optimized for all device sizes
 
----
+## 🚀 Getting Started
 
-## Installation
+### Prerequisites
 
-### Requirements
+- Node.js (v14 or higher)
+- npm or yarn
+- Git
 
-- **Node.js** v14+ or later
-- **Git** 2.28 or higher
-- **Yarn** or **npm**
+### Installation
 
-- **Express** RUN: npm install express
-
-### Step-by-Step Installation
-
-1. **Clone the repository:**
-
+1. Clone the repository:
    ```bash
-   git clone https://github.com/Saphfox/SaphFox.git
+   git clone https://github.com/Saphfox/saphfox.git
+   cd saphfox
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Create required directories:
+   ```bash
+   mkdir uploads
+   mkdir public
+   ```
+
+4. Start the server:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+The application will be available at `http://localhost:3000`
+
+## 🛠️ Tech Stack
+
+- **Backend**: Node.js, Express
+- **File Handling**: Multer
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Icons**: Font Awesome
+- **Styling**: Custom CSS with CSS Variables
+
+## 📁 Project Structure
+
+```
+saphfox/
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── index.html
+├── uploads/
+├── server.js
+├── package.json
+└── README.md
+```
+
+## 🔧 Configuration
+
+Server configuration can be modified through environment variables:
+
+- `PORT`: Server port (default: 3000)
+- `UPLOAD_LIMIT`: Maximum upload size (default: 100MB)
+
+## 🌐 API Endpoints
+
+| Method | Endpoint             | Description              |
+|--------|-----------------------|--------------------------|
+| GET    | `/`                  | Serve main application   |
+| POST   | `/upload`            | Upload new video         |
+| GET    | `/videos`            | Get all videos           |
+| POST   | `/videos/:id/like`   | Like a video             |
+| GET    | `/videos/:id/view`   | Register video view      |
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+**This Project Uses Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).**
+
+Under this license, you are free to:
+- **Share**: Copy and redistribute the material in any medium or format
+- **Adapt**: Remix, transform, and build upon the material
+
+**With the following terms:**
+- **Attribution**: You must give appropriate credit.
+- **NonCommercial**: You may not use the material for commercial purposes.
+
+## 📧 Contact
+
+Project Link: [https://github.com/Saphfox/saphfox](https://github.com/Saphfox/saphfox)
