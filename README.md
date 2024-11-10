@@ -48,13 +48,12 @@ If you’re interested in contributing, we’d love to have you on board—wheth
    ```bash
    mkdir uploads
    mkdir public
+   # or, If You Already Have an Uploads And Public Folder. Then Skip This Step.
    ```
 
 4. Start the server:
    ```bash
-   npm start
-   # or
-   yarn start
+   node index.js
    ```
 
 The application will be available at `http://localhost:3000`
