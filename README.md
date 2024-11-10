@@ -4,6 +4,12 @@ A modern, open-source content-sharing platform built with Node.js and Express, d
 
 ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 
+## 💡 Open Source & Community Driven
+
+SaphFox is an **open-source** project released under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). This license allows anyone to share and adapt the project for non-commercial use, making SaphFox accessible for personal or educational purposes. We’re committed to transparency, collaboration, and creating a welcoming space for contributions. 
+
+If you’re interested in contributing, we’d love to have you on board—whether it’s through new feature ideas, bug fixes, UI improvements, or performance optimizations. Our platform is **for the community, by the community**.
+
 ## 🌟 Features
 
 - **Intuitive Video Sharing**: Upload, watch, and share videos with ease
