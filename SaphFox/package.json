@@ -1,0 +1,19 @@
+{
+  "name": "saphfox",
+  "version": "1.0.0",
+  "description": "SaphFox Is And Open Source Project For Uploading Videos and Contens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saphfox/SaphFox.git#main"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Saphfox/SaphFox/issues"
+  },
+  "homepage": "https://github.com/Saphfox/SaphFox/tree/main#readme"
+}
