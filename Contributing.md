@@ -1,7 +1,3 @@
-Here’s a suggested `Contributing.md` layout that includes the requested sections, including a "Notes" section at the top, a list of contributors with their areas of contribution, and an inviting tone. I used a friendly and encouraging style, as well as a placeholder for adding images or other graphics.
-
----
-
 # Contributing to SaphFox
 
 Thank you for your interest in contributing to **SaphFox**! We appreciate the time and effort you’re willing to invest in making this platform the best it can be. Whether you’re a seasoned developer or a newcomer, there’s a place for everyone here.
