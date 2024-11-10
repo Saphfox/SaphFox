@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Saphfox/SaphFox/issues"
   },
-  "homepage": "https://github.com/Saphfox/SaphFox/tree/main#readme"
+  "homepage": "https://github.com/Saphfox/SaphFox/tree/main#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "keywords": []
 }
